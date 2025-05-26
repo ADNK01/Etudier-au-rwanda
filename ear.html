@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étudier au Rwanda - Votre accompagnement 100% fiable et personnalisé</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #003366;  /* Bleu foncé */
+            --secondary-color: #87CEEB; /* Bleu ciel */
+            --accent-color: #4CAF50;   /* Vert */
+            --yellow-accent: #FFD700;  /* Jaune/Or */
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary:hover {
+            background-color: #3d8b40;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-card {
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            background-color: var(--secondary-color);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .university-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .university-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question {
+            cursor: pointer;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .header-gradient {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+        
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn.active {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        /* Flag colors */
+        .rwandan-flag {
+            background: linear-gradient(to right, #20603D 33%, #FDB600 33%, #FDB600 66%, #00A1DE 66%);
+            height: 5px;
+            width: 100%;
+        }
+        
+        /* Animation for hero section */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animated-element {
+            animation: fadeUp 1s ease forwards;
+        }
+        
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-600 {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- Logo -->
+                <img src="data:image/jpeg;base64,..." alt="Étudier au Rwanda" class="h-12">
+            </div>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#accueil" class="font-medium hover:text-green-600 transition">Accueil</a>
+                <a href="#services" class="font-medium hover:text-green-600 transition">Nos Services</a>
+                <a href="#about" class="font-medium hover:text-green-600 transition">À Propos</a>
+                <a href="#universities" class="font-medium hover:text-green-600 transition">Universités</a>
+                <a href="#faq" class="font-medium hover:text-green-600 transition">FAQ</a>
+                <a href="#contact" class="btn-primary">Contact</a>
+                <div class="lang-switcher ml-4">
+                    <button class="lang-btn active">FR</button>
+                    <button class="lang-btn">EN</button>
+                </div>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-500 focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#accueil" class="block px-3 py-2 text-base font-medium hover:bg-green-100 hover:text-green-600 rounded">Accueil</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium hover:bg-green-100 hover:text-green-600 rounded">Nos Services</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium hover:bg-green-100 hover:text-green-600 rounded">À Propos</a>
+                <a href="#universities" class="block px-3 py-2 text-base font-medium hover:bg-green-100 hover:text-green-600 rounded">Universités</a>
+                <a href="#faq" class="block px-3 py-2 text-base font-medium hover:bg-green-100 hover:text-green-600 rounded">FAQ</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium hover:bg-green-100 hover:text-green-600 rounded">Contact</a>
+                <div class="flex px-3 py-2 space-x-2">
+                    <button class="lang-btn active bg-gray-200 text-gray-800">FR</button>
+                    <button class="lang-btn bg-transparent text-gray-800 border-gray-300">EN</button>
+                </div>
+            </div>
+        </div>
+        <div class="rwandan-flag"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="header-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 animated-element">Viens étudier au Rwanda avec un accompagnement 100% fiable et personnalisé</h1>
+                <p class="text-xl mb-8 animated-element delay-200">Nous vous accompagnons à chaque étape de votre parcours académique au Rwanda, du choix de l'université jusqu'à votre intégration complète.</p>
+                <div class="flex flex-wrap gap-4 animated-element delay-400">
+                    <a href="#contact" class="btn-primary text-lg">Demander une consultation gratuite</a>
+                    <a href="#services" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-blue-900 transition duration-300">Découvrir nos services</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animated-element delay-600">
+                <img src="https://www.237online.com/wp-content/uploads/2021/09/university-of-rwanda-mastercard-foundation-launch-55-million-partnership-to-develop-the-next-generation-of-african-leaders.jpg" alt="Étudiants au Rwanda" class="rounded-lg shadow-2xl max-w-full h-auto" style="max-height: 400px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Ce que nos étudiants disent</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://www.campusfrance.org/sites/default/files/medias/images/2021-08/groupe-etudiants-souriants.jpg" alt="Étudiant" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Sophie K.</h4>
+                            <p class="text-sm text-gray-600">Étudiante en Informatique</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Étudier au Rwanda m'a accompagnée de A à Z dans mes démarches. Sans eux, je n'aurais jamais pu intégrer l'Université du Rwanda aussi facilement. Merci pour votre professionnalisme!"</p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://bcdi2030.ca/wp-content/uploads/2023/11/November-10-Press-Release-Feature-Image.png" alt="Étudiant" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Jean-Pierre M.</h4>
+                            <p class="text-sm text-gray-600">Étudiant en Commerce</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Le service est exceptionnel! Mon visa a été approuvé en un temps record et l'équipe m'a trouvé un logement parfait. Je recommande vivement leurs services à tous les étudiants internationaux."</p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://prod.cdn-medias.jeuneafrique.com/cdn-cgi/image/q=auto,f=auto,metadata=none,width=592,height=296,fit=cover/https://prod.cdn-medias.jeuneafrique.com/medias/2018/10/30/tudiants-aims.jpg" alt="Étudiant" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Marie C.</h4>
+                            <p class="text-sm text-gray-600">Étudiante en Médecine</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Grâce à l'agence, mon arrivée à Kigali s'est déroulée sans stress. L'accueil à l'aéroport et l'aide pour l'installation ont fait toute la différence. Je me suis sentie en sécurité dès le début."</p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Nos Services</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Nous vous proposons différentes formules d'accompagnement adaptées à vos besoins pour faciliter votre projet d'études au Rwanda.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-6 border border-gray-200">
+                    <div class="service-icon">
+                        <img src="https://www.shutterstock.com/image-vector/visa-application-concept-icon-text-embassy-service-immigration-international-trip-ppt-page-vector-template-brochure-183439293.jpg" alt="Admission Icon" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Pack Admission</h3>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Sélection des universités adaptées à votre profil</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Préparation complète du dossier d'admission</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Soumission de la candidature</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Suivi jusqu'à l'obtention de l'admission</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#contact" class="btn-primary inline-block">Demander un devis</a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-6 border border-gray-200">
+                    <div class="service-icon">
+                        <img src="https://www.shutterstock.com/image-vector/h1b-icons-set-illustration-featuring-260nw-2480626555.jpg" alt="Visa Icon" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Pack Admission + Visa</h3>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Tout le Pack Admission</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Préparation du dossier de visa étudiant</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Conseils pour l'entretien à l'ambassade</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Suivi jusqu'à l'obtention du visa</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#contact" class="btn-primary inline-block">Demander un devis</a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-6 border border-gray-200 shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-green-600 text-white px-4 py-1 text-sm">Recommandé</div>
+                    <div class="service-icon">
+                        <img src="https://www.shutterstock.com/image-vector/immigration-color-flat-icon-digital-260nw-2618914189.jpg" alt="Pack Complet Icon" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Pack Complet</h3>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Tout le Pack Admission + Visa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Recherche de logement selon votre budget</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Accueil à l'aéroport de Kigali</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Accompagnement à l'intégration (banque, téléphone, etc.)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Support continu pendant les premiers mois</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#contact" class="btn-primary inline-block">Demander un devis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">À Propos de Nous</h2>
+                    <p class="text-gray-700 mb-4">Notre agence <strong>Étudier au Rwanda</strong> a été créée avec une mission claire : faciliter l'accès à l'éducation de qualité au Rwanda pour les étudiants internationaux.</p>
+                    <p class="text-gray-700 mb-4">Forts de notre connaissance approfondie du système éducatif rwandais et de notre réseau de partenaires universitaires, nous offrons un accompagnement personnalisé qui vous permet de vous concentrer sur l'essentiel : votre réussite académique.</p>
+                    <p class="text-gray-700 mb-8">Nous croyons fermement que l'éducation est la clé du développement personnel et professionnel. C'est pourquoi nous mettons tout en œuvre pour rendre votre expérience d'étude au Rwanda aussi enrichissante que possible.</p>
+                    <blockquote class="border-l-4 border-green-500 pl-4 italic text-gray-600">
+                        "Notre objectif est de créer un pont entre les étudiants internationaux et les opportunités académiques exceptionnelles qu'offre le Rwanda."
+                    </blockquote>
+                    <p class="mt-4 text-right">- Le Fondateur</p>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://prod.cdn-medias.jeuneafrique.com/cdn-cgi/image/q=auto,f=auto,metadata=none,width=1215,fit=cover/https://prod.cdn-medias.jeuneafrique.com/medias/2012/11/09/Rwanda-Carnegie-Mellon_Cyril-Ndegeya.jpg" alt="Fondateur" class="rounded-lg shadow-xl max-w-full h-auto" style="max-height: 400px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Universities Section -->
+    <section id="universities" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Universités Partenaires</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Découvrez nos universités partenaires au Rwanda, reconnues pour la qualité de leur enseignement et leurs infrastructures modernes.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- University 1 -->
+                <div class="university-card bg-white shadow">
+                    <img src="https://uok.ac.rw/wp-content/uploads/2024/06/NEW-CAMPUS-3-1024x562.jpg" alt="University of Kigali" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Université de Kigali</h3>
+                        <p class="text-gray-600 mb-4">Une université privée offrant des programmes variés en commerce, technologie, sciences sociales et droit.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Privée</span>
+                            <span class="text-sm font-medium">Kigali</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- University 2 -->
+                <div class="university-card bg-white shadow">
+                    <img src="https://www.africa.engineering.cmu.edu/_files/images/cmu-africa-campus.jpg" alt="University of Rwanda" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Université du Rwanda</h3>
+                        <p class="text-gray-600 mb-4">La plus grande université publique du pays, proposant un large éventail de programmes académiques.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-green-100 text-green-800 px-3 py-1 rounded-full">Publique</span>
+                            <span class="text-sm font-medium">Plusieurs campus</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- University 3 -->
+                <div class="university-card bg-white shadow">
+                    <img src="https://ulk.ac.rw/wp-content/uploads/2016/06/BACKGROUND.jpg" alt="Kigali Independent University" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Université Libre de Kigali (ULK)</h3>
+                        <p class="text-gray-600 mb-4">Une institution privée renommée pour ses programmes en économie, informatique et langues.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Privée</span>
+                            <span class="text-sm font-medium">Kigali</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- University 4 -->
+                <div class="university-card bg-white shadow">
+                    <img src="https://africanmediaagency.com/wp-content/uploads/2021/09/Student-at-UR-main-concourse-1024x680.jpeg" alt="African Leadership University" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">African Leadership University</h3>
+                        <p class="text-gray-600 mb-4">Une université innovante axée sur le développement du leadership et l'entrepreneuriat en Afrique.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Privée</span>
+                            <span class="text-sm font-medium">Kigali</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- University 5 -->
+                <div class="university-card bg-white shadow">
+                    <img src="https://www.africa.engineering.cmu.edu/_files/images/newcampus/campus-aerial.jpeg" alt="Carnegie Mellon University Africa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Carnegie Mellon University Africa</h3>
+                        <p class="text-gray-600 mb-4">Campus africain de la prestigieuse université américaine, spécialisé dans les technologies de l'information.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Internationale</span>
+                            <span class="text-sm font-medium">Kigali</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- University 6 -->
+                <div class="university-card bg-white shadow">
+                    <img src="https://uok.ac.rw/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-15-at-17.16.34.jpeg" alt="Mount Kenya University Rwanda" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mount Kenya University Rwanda</h3>
+                        <p class="text-gray-600 mb-4">Branche rwandaise de cette université kényane, offrant des programmes en santé, éducation et commerce.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Internationale</span>
+                            <span class="text-sm font-medium">Kigali</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Foire Aux Questions</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Trouvez les réponses aux questions les plus fréquemment posées sur les études au Rwanda.</p>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item py-4">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="font-semibold text-lg">Quels sont les frais d'inscription dans les universités rwandaises?</h3>
+                        <i class="fas fa-chevron-down text-gray-500"></i>
+                    </div>
+                    <div class="faq-answer pt-2 text-gray-600">
+                        <p>Les frais de scolarité au Rwanda varient selon les institutions et les programmes :</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>Universités publiques : entre 1 000 et 3 000 USD par an</li>
+                            <li>Universités privées : entre 2 000 et 5 000 USD par an</li>
+                            <li>Universités internationales : jusqu'à 10 000 USD par an</li>
+                        </ul>
+                        <p class="mt-2">À noter que certains programmes spécifiques comme la médecine ou les études d'ingénieur peuvent être plus coûteux.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item py-4">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="font-semibold text-lg">Comment obtenir un visa étudiant pour le Rwanda?</h3>
+                        <i class="fas fa-chevron-down text-gray-500"></i>
+                    </div>
+                    <div class="faq-answer pt-2 text-gray-600">
+                        <p>Pour obtenir un visa d'étudiant rwandais, vous devez :</p>
+                        <ol class="list-decimal pl-5 mt-2 space-y-1">
+                            <li>Avoir une lettre d'admission d'une institution académique rwandaise</li>
+                            <li>Faire une demande en ligne sur le site de la Direction Générale de l'Immigration du Rwanda</li>
+                            <li>Fournir un passeport valide, des photos d'identité et une preuve de moyens financiers</li>
+                            <li>Présenter un casier judiciaire de votre pays d'origine</li>
+                            <li>Payer les frais de visa (environ 30 à 50 USD)</li>
+                        </ol>
+                        <p class="mt-2">Notre agence vous accompagne dans toutes ces démarches administratives pour garantir l'obtention de votre visa étudiant.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item py-4">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="font-semibold text-lg">Est-ce que vous aidez pour le logement?</h3>
+                        <i class="fas fa-chevron-down text-gray-500"></i>
+                    </div>
+                    <div class="faq-answer pt-2 text-gray-600">
+                        <p>Oui, nous proposons une assistance complète pour le logement dans notre Pack Complet :</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>Recherche de logement selon votre budget et vos préférences</li>
+                            <li>Options en résidence universitaire (100-400 USD/mois) ou appartement privé (200-500 USD/mois)</li>
+                            <li>Négociation avec les propriétaires</li>
+                            <li>Vérification des contrats de location</li>
+                            <li>Accompagnement lors de l'emménagement</li>
+                        </ul>
+                        <p class="mt-2">Nous disposons d'un réseau de propriétaires fiables à Kigali et dans les autres villes universitaires du Rwanda.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item py-4">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="font-semibold text-lg">Quelles sont les meilleures universités au Rwanda?</h3>
+                        <i class="fas fa-chevron-down text-gray-500"></i>
+                    </div>
+                    <div class="faq-answer pt-2 text-gray-600">
+                        <p>Les principales universités rwandaises reconnues pour leur qualité d'enseignement sont :</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>Université du Rwanda (publique) - la plus grande du pays</li>
+                            <li>Université de Kigali (privée) - reconnue pour ses programmes de commerce et technologie</li>
+                            <li>Carnegie Mellon University Africa - excellente pour les technologies de l'information</li>
+                            <li>African Leadership University - axée sur le leadership et l'entrepreneuriat</li>
+                            <li>Université Libre de Kigali (ULK) - réputée pour ses programmes en économie et langues</li>
+                        </ul>
+                        <p class="mt-2">Nous vous aidons à choisir l'université qui correspond le mieux à votre profil académique et à vos objectifs professionnels.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item py-4">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="font-semibold text-lg">Quel est le coût de la vie au Rwanda pour un étudiant?</h3>
+                        <i class="fas fa-chevron-down text-gray-500"></i>
+                    </div>
+                    <div class="faq-answer pt-2 text-gray-600">
+                        <p>Le coût de la vie mensuel pour un étudiant au Rwanda est relativement abordable :</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>Logement : 100-500 USD selon le type et l'emplacement</li>
+                            <li>Nourriture : 150-250 USD</li>
+                            <li>Transport : 30-50 USD</li>
+                            <li>Télécommunications : 20-30 USD</li>
+                            <li>Loisirs et divers : 50-100 USD</li>
+                        </ul>
+                        <p class="mt-2">Au total, prévoyez un budget mensuel d'environ 350-900 USD selon votre style de vie et le type de logement choisi.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="faq-item py-4">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="font-semibold text-lg">Quelles sont les langues d'enseignement au Rwanda?</h3>
+                        <i class="fas fa-chevron-down text-gray-500"></i>
+                    </div>
+                    <div class="faq-answer pt-2 text-gray-600">
+                        <p>Les langues d'enseignement principales au Rwanda sont :</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>Anglais : Langue principale d'enseignement dans la plupart des universités</li>
+                            <li>Français : Certains programmes sont disponibles en français</li>
+                            <li>Kinyarwanda : Langue nationale, rarement utilisée comme langue principale d'instruction au niveau universitaire</li>
+                        </ul>
+                        <p class="mt-2">La maîtrise de l'anglais est recommandée pour la majorité des programmes académiques. Certaines universités offrent des cours de langue pour les étudiants internationaux.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Contact / Consultation</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Contactez-nous pour une consultation gratuite ou pour toute question concernant nos services.</p>
+            
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2">
+                    <form class="bg-white rounded-lg shadow-md p-8">
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="name">Nom complet</label>
+                            <input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500" type="text" id="name" placeholder="Votre nom">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="email">Email</label>
+                            <input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500" type="email" id="email" placeholder="Votre email">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="country">Pays</label>
+                            <input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500" type="text" id="country" placeholder="Votre pays">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="goal">Objectif académique</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500" id="goal">
+                                <option value="" selected disabled>Choisissez votre objectif</option>
+                                <option value="bachelor">Licence/Bachelor</option>
+                                <option value="master">Master</option>
+                                <option value="phd">Doctorat/PhD</option>
+                                <option value="other">Autre formation</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="message">Message</label>
+                            <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 h-32" id="message" placeholder="Votre message ou question"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary w-full">Envoyer ma demande</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 rounded-lg p-8 h-full">
+                        <h3 class="text-xl font-bold mb-6">Informations de contact</h3>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-green-500 p-3 rounded-full text-white mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Adresse</h4>
+                                <p class="text-gray-600">Kigali, Rwanda<br>Centre-ville, près de l'Université du Rwanda</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-green-500 p-3 rounded-full text-white mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-gray-600">contact@etudieraurwanda.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-green-500 p-3 rounded-full text-white mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Téléphone</h4>
+                                <p class="text-gray-600">+250 792 555 663</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-8">
+                            <div class="bg-green-500 p-3 rounded-full text-white mr-4">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Heures d'ouverture</h4>
+                                <p class="text-gray-600">Lundi - Vendredi: 8h00 - 18h00<br>Samedi: 9h00 - 13h00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <a href="https://wa.me/250792555663" target="_blank" class="flex items-center justify-center bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700 transition duration-300">
+                                <i class="fab fa-whatsapp text-xl mr-2"></i>
+                                Discuter sur WhatsApp
+                            </a>
+                            <a href="https://www.facebook.com/etudieraurwanda" target="_blank" class="flex items-center justify-center bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
+                                <i class="fab fa-facebook-f text-xl mr-2"></i>
+                                Suivez-nous sur Facebook
+                            </a>
+                            <a href="#contact" class="flex items-center justify-center bg-purple-600 text-white py-3 px-4 rounded-lg hover:bg-purple-700 transition duration-300">
+                                <i class="far fa-calendar-alt text-xl mr-2"></i>
+                                Réserver un appel gratuit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Before Footer -->
+    <section class="bg-green-700 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prêt à commencer votre aventure académique au Rwanda?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Contactez-nous dès aujourd'hui et bénéficiez d'un accompagnement personnalisé pour réaliser votre projet d'études.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="bg-white text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Demander une consultation</a>
+                <a href="https://wa.me/250792555663" target="_blank" class="bg-green-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-500 transition duration-300">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <!-- Logo -->
+                    <img src="data:image/jpeg;base64,..." alt="Étudier au Rwanda" class="h-12 mb-4">
+                    <p class="text-gray-400 max-w-xs">Votre partenaire de confiance pour réussir vos études au Rwanda avec un accompagnement personnalisé à chaque étape.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Liens utiles</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#accueil" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition">Nos Services</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition">À Propos</a></li>
+                            <li><a href="#universities" class="text-gray-400 hover:text-white transition">Universités</a></li>
+                            <li><a href="#faq" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Services</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition">Admission</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition">Visa Étudiant</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition">Logement</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition">Accueil Aéroport</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition">Intégration</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2 text-green-500"></i>
+                                <span class="text-gray-400">Kigali, Rwanda</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-2 text-green-500"></i>
+                                <a href="mailto:contact@etudieraurwanda.com" class="text-gray-400 hover:text-white transition">contact@etudieraurwanda.com</a>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-phone-alt mr-2 text-green-500"></i>
+                                <a href="tel:+250792555663" class="text-gray-400 hover:text-white transition">+250 792 555 663</a>
+                            </li>
+                        </ul>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="border-gray-800 my-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">© 2025 Étudier au Rwanda. Tous droits réservés.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-500 text-sm hover:text-white transition">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-500 text-sm hover:text-white transition">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/250792555663" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentNode;
+                faqItem.classList.toggle('active');
+                
+                const chevron = question.querySelector('i');
+                chevron.classList.toggle('fa-chevron-down');
+                chevron.classList.toggle('fa-chevron-up');
+                
+                // Close other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem && item.classList.contains('active')) {
+                        item.classList.remove('active');
+                        const otherChevron = item.querySelector('i');
+                        otherChevron.classList.add('fa-chevron-down');
+                        otherChevron.classList.remove('fa-chevron-up');
+                    }
+                });
+            });
+        });
+        
+        // Language switcher
+        const langButtons = document.querySelectorAll('.lang-btn');
+        
+        langButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                langButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Here you would implement the language change functionality
+                // For demonstration we're just toggling the class
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
